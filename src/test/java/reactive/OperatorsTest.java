@@ -145,7 +145,7 @@ public class OperatorsTest {
 
     @Test
     public void subscribeOnIO() throws Exception {
-        Mono<List<String>> list = Mono.fromCallable(() -> Files.readAllLines(Path.of("text-file")))
+        Mono<List<String>> list = Mono.fromCallable(() -> Files.readAllLines(Path.of("text-file.txt")))
                 .log()
                 .subscribeOn(Schedulers.boundedElastic());
 
